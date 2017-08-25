@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chapter 2 - Keyframes Example 2</title>
+    <style>
+
+    #nav-link {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: auto;
+        padding: 12px;
+    }
+
+    .first {
+        background-color: #eee;
+        font-size: 100%;
+        margin: auto;
+        transition: all, 0.8s;
+    }
+
+    .first:hover {
+        background: #0f0;
+        font-size: 120%;
+    }
+
+    /* end boilerplate */
+
+    .animationOne {
+        border: 2px solid black;
+        
+        -webkit-animation-name:first-animation;
+        animation-name:second-animation-timing;
+
+        -webkit-animation-duration:5s;
+        animation-duration: 5s;
+    }    
+
+    @-webkit-keyframes first-animation {
+        from {
+            border-color:blue;
+        }
+
+        to {
+            border-color:red;
+        }
+    }
+
+    @keyframes first-animation {
+        from {
+            border-color:blue;
+        }
+
+        to {
+            border-color:red;
+        }
+    }
+
+    @-webkit-keyframes first-animation-percentage {
+        0% {
+            border-color: blue;
+        }
+
+        100% {
+            border-color: red;
+        }
+    }
+
+
+    @keyframes first-animation-percentage {
+        0% {
+            border-color: blue;
+        }
+
+        100% {
+            border-color: red;
+        }
+    }
+
+    @keyframes second-animation-timing {
+        0% {
+            animation-timing-function:ease-in;
+        }
+
+        25% {
+            transform:translateX(50px);
+            animation-timing-function:ease-out;
+        }
+
+        50% {
+            transform:translateX(100px);
+            animation-timing-function:linear;
+        }
+
+        100% {
+            transform:translateX(200px);
+        }
+    }    
+
+    </style>
+</head>
+<body>
+    <h1>CSS Keyframe animation</h1>
+
+    <div class="animationOne">
+        cssAnimation
+     </div>
+    
+    <a id="nav-link" href="index.html" class="first">Back to Index</a>
+
+</body>
+</html>
