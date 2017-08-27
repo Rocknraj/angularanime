@@ -2,9 +2,7 @@
 
     #nav-link {
         display: block;
-        position: absolute;
-        bottom: 0;
-        right: 0;
+        float: right;
         height: auto;
         padding: 12px;
     }
@@ -20,6 +18,23 @@
         background: #0f0;
         font-size: 120%;
     }
+
+    /* source code view */
+
+    #source-code {
+        display: block;
+        background-color: #eee;
+        margin: 24px auto;
+        padding: 8px;
+    }
+
+    #code-text {
+        display: block;
+        width: 30%;
+        margin: 0 auto;
+    }
+
+    /* end boilerplate */
 
 #jsanimation {
     position: relative;

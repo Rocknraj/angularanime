@@ -4,11 +4,9 @@
     <title>Chapter 2 - First sample</title>
     <style>
 
-    #nav-link {
+     #nav-link {
         display: block;
-        position: absolute;
-        bottom: 0;
-        right: 0;
+        float: right;
         height: auto;
         padding: 12px;
     }
@@ -24,7 +22,24 @@
         background: #0f0;
         font-size: 120%;
     }
-        
+
+    /* source code view */
+
+    #source-code {
+        display: block;
+        background-color: #eee;
+        margin: 24px auto;
+        padding: 8px;
+    }
+
+    #code-text {
+        display: block;
+        width: 30%;
+        margin: 0 auto;
+    }
+
+    /* end boilerplate */
+            
         .cssanimationTimes {
             transition-property: width, background-color;
             transition-duration: 2s, 10s;

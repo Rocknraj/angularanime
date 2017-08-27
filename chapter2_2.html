@@ -6,9 +6,7 @@
 
     #nav-link {
         display: block;
-        position: absolute;
-        bottom: 0;
-        right: 0;
+        float: right;
         height: auto;
         padding: 12px;
     }
@@ -23,6 +21,21 @@
     .first:hover {
         background: #0f0;
         font-size: 120%;
+    }
+
+    /* source code view */
+
+    #source-code {
+        display: block;
+        background-color: #eee;
+        margin: 24px auto;
+        padding: 8px;
+    }
+
+    #code-text {
+        display: block;
+        width: 30%;
+        margin: 0 auto;
     }
 
     /* end boilerplate */
@@ -107,7 +120,26 @@
         cssAnimation
      </div>
     
-    <a id="nav-link" href="index.html" class="first">Back to Index</a>
+     <div id="source-code">
+        <div id="code-text"></div>
+     </div>
+    
+    <script>
+
+
+        let backLinkElem = document.createElement('a');
+        let textNode = document.createTextNode('Back to Index');
+        let htmlContent = document.documentElement.innerHTML;
+
+        document.getElementById('code-text').innerText = htmlContent;
+        backLinkElem.href = "index.html";
+        backLinkElem.id = "nav-link";
+        backLinkElem.class = "first";
+        backLinkElem.appendChild(textNode);
+
+    </script>
+
+    <a href="index.html" id="nav-link">Back to Index</a>
 
 </body>
 </html>

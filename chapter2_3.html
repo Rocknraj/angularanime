@@ -7,9 +7,7 @@
 
     #nav-link {
         display: block;
-        position: absolute;
-        bottom: 0;
-        right: 0;
+        float: right;
         height: auto;
         padding: 12px;
     }
@@ -78,33 +76,23 @@
      <div id="source-code">
         <div id="code-text"></div>
      </div>
-    
-    
 
     <script>
 
-        // let backLinkElem = '<a id="nav-link" href="index.html" class="first">Back to Index</a>';
-        let backLinkElem = '<a>';
-        let textnode = document.createTextNode('Back to Index');
 
-        document.addEventListener("DOMContentLoaded", function (event) {
-            let htmlContent = document.documentElement.innerHTML;
+        let backLinkElem = document.createElement('a');
+        let textNode = document.createTextNode('Back to Index');
+        let htmlContent = document.documentElement.innerHTML;
 
-
-            document.getElementById('code-text').innerText = htmlContent;
-
-            backLinkElem.href = "index.html";
-            backLinkElem.id = "nav-link";
-            backLinkElem.class = "first";
-            backLinkElem.appendChild(textnode);
-
-
-            document.getElementByTagName('body').appendChild(backLinkElem);
-
-        });
-
+        document.getElementById('code-text').innerText = htmlContent;
+        backLinkElem.href = "index.html";
+        backLinkElem.id = "nav-link";
+        backLinkElem.class = "first";
+        backLinkElem.appendChild(textNode);
 
     </script>
+
+    <a href="index.html" id="nav-link">Back to Index</a>
 
 </body>
 </html>

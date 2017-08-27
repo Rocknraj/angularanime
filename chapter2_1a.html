@@ -4,9 +4,11 @@
     <title>Chapter 2 - Free Form Experiment</title>
     <style>
 
+    /* Back to home link */
+
     #nav-link {
         display: block;
-        width: auto;
+        float: right;
         height: auto;
         padding: 12px;
     }
@@ -23,12 +25,66 @@
         font-size: 120%;
     }
 
+    /* source code view */
+
+    #source-code {
+        display: block;
+        background-color: #eee;
+        margin: 24px auto;
+        padding: 8px;
+    }
+
+    #code-text {
+        display: block;
+        width: 30%;
+        margin: 0 auto;
+    }
+
+    /* end boilerplate */
+
+    #animated-link {
+        display: block;
+        width: auto;
+        height: auto;
+        padding: 12px;
+    }
+
+    .sample {
+        background-color: #eee;
+        font-size: 100%;
+        margin: auto;
+        transition: all, 0.8s;
+    }
+
+    .sample:hover {
+        background: #0f0;
+        font-size: 120%;
+    }
     </style>
+
 </head>
 <body>
     <h1>CSS Transition animation</h1>
     
-    <a id="nav-link" href="#" class="first">Animated Mouseover</a>
+    <a id="animated-link" href="#" class="sample">Animated Mouseover</a>
+
+    <div id="source-code">
+        <div id="code-text"></div>
+    </div>
+
+    <script>
+
+        let backLinkElem = document.createElement('a');
+        let textNode = document.createTextNode('Back to Index');
+        let htmlContent = document.documentElement.innerHTML;
+
+        document.getElementById('code-text').innerText = htmlContent;
+        backLinkElem.href = "index.html";
+        backLinkElem.id = "nav-link";
+        backLinkElem.class = "first";
+        backLinkElem.appendChild(textNode);
+
+    </script>
 
 </body>
 </html>
